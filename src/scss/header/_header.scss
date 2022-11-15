@@ -1,0 +1,54 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as m;
+.header {
+    padding: 5rem 0;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include m.tablet {
+        min-height: 70rem;
+    }
+
+    &::before {
+        content: '';
+        background-color: var.$black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: .6;
+    }
+    .header-content {
+        position: relative;
+        h1 {
+            text-align: center;
+            color: var.$white;
+            text-transform: uppercase;
+            margin-top: 5rem;
+            @include m.tablet {
+                margin-top: 10rem;
+            }
+        }
+    }
+}
+
+
+.header-home {
+    background-image: url(../img/header_inicio.webp);
+}
+.header-about-us {
+    background-image: url(../img/header_nosotros.webp);
+}
+.header-process {
+    background-image: url(../img/header_proceso.webp);
+}
+.header-menu {
+    background-image: url(../img/header_menu.webp);
+}
+.header-gallery {
+    background-image: url(../img/header_galeria.webp);
+}
+.header-contact {
+    background-image: url(../img/header_contacto.webp);
+}
